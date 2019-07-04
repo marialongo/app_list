@@ -12,50 +12,34 @@
 
     <table>
 
-            <table>
-                    <tr>
-                      <th>Série</th>
-                      <th>Gênero</th>
-                      <th>N°Temporadas</th>
-                      <th>Nota</th>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                    </tr>
-                    <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                    </tr>
-                    <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                    </tr>
-                    <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                    </tr>
-                    
-                  </table>
-                  
+        <table>
+            <thead>
+                <tr>
+                    <th>Série</th>
+                    <th>Gênero</th>
+                    <th>N°Temporadas</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody id="lista-series">
+                <tr>
+
+                </tr>
+                <tr class="series" id="primeira-serie">
+                    <td class="serie1-nome"></td>
+                    <td class="info-genero"></td>
+                    <td class="info-ntemporadas"></td>
+                    <td class="info-nota"></td>
+                </tr>
+            </tbody>
+
+        </table>
+
 
     </table>
-    
+
     <script>
+
 
         var serie1 = {
             nome: "Riverdale",
@@ -102,8 +86,40 @@
             serie5
         ];
 
+        var series = document
+            .querySelectorAll(".series");
 
-    var  s1 = document.getElementById("serie1");
+        for (var index = 0; index < series.length; index++) {
+
+            var serie = series[index];
+
+            var colunanome = serie.querySelector(".serie1-nome");
+            var nome = colunanome.textContent;
+            nome = serie1.nome;
+            console.log(nome)
+
+            var colunagenero = serie.querySelector(".info-genero");
+            var genero = colunagenero.textContent;
+            genero = serie1.genero;
+            console.log(genero)
+
+
+            var colunantemporadas = serie.querySelector(".info-ntemporadas");
+            var ntemporadas = colunantemporadas.textContent;
+            console.log(ntemporadas)
+
+
+            var colunanota = serie.querySelector(".info-nota");
+            var nota = colunanota.textContent;
+            console.log(nota)
+
+
+
+
+        }
+
+
+
 
     </script>
 </body>
