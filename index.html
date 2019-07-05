@@ -113,7 +113,17 @@
             var nota = colunanota.textContent;
             console.log(nota)
 
+            function renderSeries() {
+                for (serie of series) {
+                    var serieElement = document.createElement('li');
+                    var serieText = document.createTextNode(serie);
 
+                    serieElement.appendChild(serieText);
+                    listElement.appendChild(serieElement);
+
+                }
+            }
+            renderSeries();
 
 
         }
