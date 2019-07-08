@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    
     <table>
 
         <table>
@@ -39,8 +39,12 @@
     </table>
 
     <script>
+/*
+onload();
 
-
+function onLoad() {
+  let series = [];
+*/
         var serie1 = {
             nome: "Riverdale",
             genero: 'Drama Adolescente',
@@ -77,14 +81,19 @@
             ntemporadas: '3',
             nota: '4.5/5.0'
         };
+        /*
+        series.push(serie1);
+        series.push(serie2);
+        series.push(serie3);
+        series.push(serie4);
+        series.push(serie5);
 
-        var series = [
-            serie1,
-            serie2,
-            serie3,
-            serie4,
-            serie5
-        ];
+        imprimirArray('spanOriginal', series);
+  
+  imprimirArray('spanOrdenadaPorNome', series);
+
+*/
+
 
         var series = document
             .querySelectorAll(".series");
