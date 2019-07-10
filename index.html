@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <table>
 
         <table>
@@ -23,10 +23,9 @@
             </thead>
             <tbody id="lista-series">
                 <tr>
-
                 </tr>
                 <tr class="series" id="primeira-serie">
-                    <td class="serie1-nome"></td>
+                    <td class="serie-nome"></td>
                     <td class="info-genero"></td>
                     <td class="info-ntemporadas"></td>
                     <td class="info-nota"></td>
@@ -39,12 +38,13 @@
     </table>
 
     <script>
-/*
-onload();
 
-function onLoad() {
-  let series = [];
-*/
+        /*onload();
+        
+        function onLoad() {
+            */
+        let listaSeries = [];
+
         var serie1 = {
             nome: "Riverdale",
             genero: 'Drama Adolescente',
@@ -81,65 +81,49 @@ function onLoad() {
             ntemporadas: '3',
             nota: '4.5/5.0'
         };
+
+        listaSeries.push(serie1);
+        listaSeries.push(serie2);
+        listaSeries.push(serie3);
+        listaSeries.push(serie4);
+        listaSeries.push(serie5);
+        console.log(listaSeries);
         /*
-        series.push(serie1);
-        series.push(serie2);
-        series.push(serie3);
-        series.push(serie4);
-        series.push(serie5);
-
-        imprimirArray('spanOriginal', series);
-  
-  imprimirArray('spanOrdenadaPorNome', series);
-
-*/
+             imprimirArray('spanOriginal', series);
+       
+       imprimirArray('spanOrdenadaPorNome', series);
+     
+     */
 
 
         var series = document
             .querySelectorAll(".series");
 
-        for (var index = 0; index < series.length; index++) {
+        for (var index = 0; index < listaSeries.length; index++) {
 
-            var serie = series[index];
-
-            var colunanome = serie.querySelector(".serie1-nome");
-            var nome = colunanome.textContent;
-            nome = serie1.nome;
+            var serie = listaSeries[index];
+            nome = serie.nome;
             console.log(nome)
-
-            var colunagenero = serie.querySelector(".info-genero");
-            var genero = colunagenero.textContent;
-            genero = serie1.genero;
+            genero = serie.genero;
             console.log(genero)
-
-
-            var colunantemporadas = serie.querySelector(".info-ntemporadas");
-            var ntemporadas = colunantemporadas.textContent;
+            ntemporadas = serie.ntemporadas;
             console.log(ntemporadas)
-
-
-            var colunanota = serie.querySelector(".info-nota");
-            var nota = colunanota.textContent;
+            nota = serie.nota;
             console.log(nota)
-
-            function renderSeries() {
-                for (serie of series) {
-                    var serieElement = document.createElement('li');
-                    var serieText = document.createTextNode(serie);
-
-                    serieElement.appendChild(serieText);
-                    listElement.appendChild(serieElement);
-
-                }
-            }
-            renderSeries();
-
-
         }
 
+/*
+        function renderSeries() {
+            for (serie of series) {
+                var serieElement = document.createElement('td');
+                var serieText = document.createTextNode(serie);
 
+                serieElement.appendChild(serieText);
+                listElement.appendChild(serieElement);
 
-
+            }
+        }
+*/
     </script>
 </body>
 
